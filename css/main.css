@@ -1,0 +1,225 @@
+:root {
+  --border-size: 0.125rem;
+  --duration: 250ms;
+  --ease: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --font-family: monospace;
+  --color-primary: Transparent;
+  --color-secondary: black;
+  --color-tertiary: dodgerblue;
+  --shadow: rgba(0, 0, 0, 0.1);
+  --space: 1rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  padding: calc(var(--space) * 2);
+  max-width: 1800px;
+}
+
+.multi-button {
+  display: flex;
+  width: 100%;
+  box-shadow: var(--shadow) 4px 4px;
+}
+
+.multi-button button {
+  flex-grow: 1;
+  cursor: pointer;
+  position: relative;
+  padding:
+    calc(var(--space) / 1.125)
+    var(--space)
+    var(--space);
+  border: var(--border-size) solid black;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  font-size: 1.5rem;
+font-family: 'Poppins', sans-serif;
+  text-transform: lowercase;
+  text-shadow: var(--shadow) 2px 2px;
+  transition: flex-grow var(--duration) var(--ease);
+}
+
+.multi-button button + button {
+  border-left: var(--border-size) solid black;
+  margin-left: calc(var(--border-size) * -1);
+}
+
+.multi-button button:hover,
+.multi-button button:focus {
+  flex-grow: 1.35;
+  color: white;
+  outline: none;
+  text-shadow: none;
+  background-color: var(--color-secondary);
+}
+
+.multi-button button:focus {
+  outline: var(--border-size) dashed var(--color-primary);
+  outline-offset: calc(var(--border-size) * -3);
+}
+
+.multi-button:hover button:focus:not(:hover) {
+  flex-grow: 1;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  outline-color: var(--color-tertiary);
+}
+
+.multi-button button:active {
+  transform: translateY(var(--border-size));
+}
+
+.center-con {
+    display: flex;
+    height: 18vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.round {
+    position: relative;
+    border: 3px solid black;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+}
+
+span {
+    z-index: 999;
+    height: 3px;
+    margin:1px;
+    width: 30px;
+    background: black;
+    transition: 0.4s ease;
+}
+
+span:first-child {
+    display: block;
+    position: absolute;
+    transform: rotate(48deg);
+    left: 23%;
+    bottom: 30%;
+}
+
+span:nth-child(2) {
+    display: block;
+    position: absolute;
+    transform: rotate(-48deg);
+    left: 43%;
+    bottom: 30%;
+}
+
+span:nth-child(3) {
+    display: block;
+    position: absolute;
+    transform: rotate(48deg);
+    left: 23%;
+    bottom: 54%;
+}
+
+span:nth-child(4) {
+    display: block;
+    position: absolute;
+    transform: rotate(-48deg);
+    left: 43%;
+    bottom: 54%;
+}
+
+.round:hover span:nth-child(1) {
+    transform: rotate(-132deg);
+}
+
+.round:hover span:nth-child(2) {
+    transform: rotate(132deg);
+}
+
+.round:hover span:nth-child(3) {
+    transform: rotate(229deg);
+}
+
+.round:hover span:nth-child(4) {
+    transform: rotate(-229deg);
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.centertext{
+  textalign: center;
+  font-size: 4vw;
+font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
+.container-fluid{
+  background-color: Transparent;
+  align-content:center;
+}
+
+
+.title{
+font-size: 6vw;
+align-items: center;
+font-family: 'Poppins', sans-serif;
+color: black;
+text-align: center
+}
+
+.title2{
+font-size: 2vw;
+align-items: center;
+font-family: 'Poppins', sans-serif;
+color: black;
+}
+
+.aboutmetext{
+font-size: 1.5vw;
+font-family: 'Poppins', sans-serif;
+color: black;
+}
+
+
+.imageINFO {
+  width:16vw;
+  height:24vw;
+  min-width: 4vw;
+  min-height: 6vw;
+}
+.infotab{
+    font-family: 'Poppins', sans-serif;
+    font-size: 40px;
+    color: black;
+}
+.backgroundtext{
+  backdrop-filter: blur(50px);
+  border:2px solid #000;
+}
+
+#aboutme{
+  }
+#home{
+}
